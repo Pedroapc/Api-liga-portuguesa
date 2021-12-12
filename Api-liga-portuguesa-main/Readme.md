@@ -2,8 +2,8 @@ API LIGA PORTUGUESA
 
 Instruções de utilização: 
 
- - Utilizar o comando npm install
- - Utilizar o comando node server.js
+ - Utilizar o comando npm install na consola do Visual Studio Code
+ - Utilizar o comando node server.js na consola do Visual Studio Code
  - Aceder ao website http://localhost:8080/
 
 Restrições:
