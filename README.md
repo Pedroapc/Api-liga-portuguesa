@@ -1,4 +1,5 @@
 # Api-liga-portuguesa
+ 
+Para abrir o projeto no VSC pode ser feito através do CMD adaptando o seguinte path ao do computador que está a usar e usar o comando:
 
-No VSCode abrir a pasta Api-liga-portuguesa-main que tem os ficheiros todos e não a pasta Api-liga-portuguesa-main que contém apenas outra pasta Api-liga-portuguesa-main e este ficheiro readme. Isto pode causar problemas ao executar o código.
-A pasta correta contém outro ficheiro readme com instruções para usar o front-end corretamente.
+C:\Users\User\Downloads\Api-liga-portuguesa-main\Api-liga-portuguesa-main\code .
