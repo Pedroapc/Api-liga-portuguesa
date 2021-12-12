@@ -37,6 +37,7 @@ Acessibilidade:
         Forma - Resultados dos Últimos 10 Jogos
 
     Por exemplo:    Temporada Regular   P   J   V   E   D   GM  GS DG   Forma
+    <br/>
                     1 Sporting CP       38  14  12  2   0   24  5  19   E V V V V V V V V V
 
 Utilizador Previamente Criado:
