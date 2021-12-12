@@ -11,6 +11,8 @@ Restrições:
  - Um utilizador sem login efetuado consegue apenas ver as imagens do carrossel
  - Um utilizador com login efetuado tem acesso a todas as abas
 
+ AVISO: Se o login for efetuado e de seguida se fizer refresh à página a sessão irá aparecer como terminada pois volta a aparecer apenas o botão de Login e Registar. No entanto ainda será possível aceder aos conteúdos todos. Isto acontece porque a sessão não foi realmente terminada como podemos verificar no "Local Storage" na Aba "Security" das Devtools do browser. Para terminar a sessão corretamente é necessário fazer logout utilizando o botão programado para o efeito.
+
 Registo de utilizador:
 
  - Após inserir os dados de registo e pressionar submeter irá ser enviado um link para a consola do Visual Studio Code.
