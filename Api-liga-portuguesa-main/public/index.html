@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Liga Portuguesa</title>
+    <link rel="stylesheet" type="text/css" href="css/estilo.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.10.2/css/all.css"
+    />
+  </head>
+  <body>
+    
+    
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      
+      .topnav {
+        overflow: hidden;
+        background-color: #333;
+      }
+      
+      .topnav a {
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+      }
+      
+      .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+      
+      .topnav a.active {
+        background-color: #04AA6D;
+        color: white;
+      }
+      </style>
+      </head>
+      <body>
+      
+
+      <div class="topnav">
+        <a class="active me-3" href="#home">Equipas da Liga Portuguesa</a>
+        <form name="formRadio" class="container-fluid justify-content-start ">
+          <input type="radio" class="btn-check" name="btnradio" id="btnradio1" value="classificacao" onclick="getStandings()">
+          <label style="line-height: 40px; border-color: rgb(56, 94, 221); background-color: rgb(56, 94, 221); height: 54px; width: 125px; color: white;" class="btn btn-outline-primary me-2  " for="btnradio1">Classificação</label>
+
+          <input type="radio" class="btn-check" name="btnradio" id="btnradio2" value="sporting" onclick="getArticles()">
+          <label style="line-height: 40px; background-color: green; border-color: green; color: white;   height: 54px; width: 100px;" class="btn btn-outline-primary me-2" for="btnradio2">Sporting</label>
+
+          <input type="radio" class="btn-check" name="btnradio" id="btnradio3" value="porto" onclick="getArticles()">
+          <label style="line-height: 40px; background-color: blue;  border-color: blue; color: white; height: 54px; width: 100px;" class="btn btn-outline-primary me-2" for="btnradio3">Porto</label>
+
+          <input type="radio" class="btn-check" name="btnradio" id="btnradio4" value="benfica" onclick="getArticles()">
+          <label style="line-height: 40px; background-color: red; border-color: red;color: white; height: 54px; width: 100px;"  class="btn btn-outline-primary me-2" for="btnradio4">Benfica</label>
+
+
+          <button
+            type="button"
+            class="btn btn-primary me-2"
+            style="float:right" 
+            id="btnModalLogin"
+          >
+            Login
+          </button>
+
+          <button
+            type="button"
+            class="btn btn-primary me-2"
+            style="float:right"
+            id="btnModalRegistar"
+          >
+            Registar
+          </button>
+
+          <button
+            type="button"
+            class="btn btn-primary me-2"
+            style="float:right"
+            id="btnLogoff"
+            hidden = true
+          >
+            Logout
+          </button>
+
+        </form>
+
+       
+      </div>
+      
+      <div style="padding-left:200px; background-color: black; color: white;">
+        Este Website foi feito com o propósito de dar informações sobre a 1ª Liga Portuguesa de Futebol. Está dísponivel a classificação do campeonato bem como notícias sobre os 3 clubes com mais troféus desta liga.
+      </div>
+  
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://www.markuptag.com/bootstrap/5/css/bootstrap.min.css"
+    />
+
+    <script src="js/script.js" defer></script>
+  </head>
+  <body>
+    
+    <section aria-label="Newest Photos">
+      <div class="carousel" data-carousel>
+        <button class="carousel-button prev" data-carousel-button="prev">&#8656;</button>
+        <button class="carousel-button next" data-carousel-button="next">&#8658;</button>
+        <ul data-slides>
+          
+          <li class="slide" data-active>
+            <img src="https://i.ibb.co/Trhfr5w/PRIMEIRA-LIGA.png" alt="Bwin">
+          </li>
+          <li class="slide">
+            <img src="https://miro.medium.com/max/2000/1*2K2tBACUnnVvK-mrh9If5A.jpeg" alt="Sporting">
+          </li>
+          <li class="slide">
+            <img src="https://coolwallpapers.me/picsup/5730974-fc-porto-wallpapers.jpg" alt="Porto">
+          </li>
+          <li class="slide">
+            <img src="https://img.besthqwallpapers.com/Uploads/21-8-2017/18841/benfica-fc-football-club-emblem-benfica-logo-lisbon.jpg" alt="Benfica">
+          </li>
+          <li class="slide">
+            <img src="http://www.sportonstage.com/wp-content/uploads/2018/10/noticia-scbraga.jpg" alt="SC Braga">
+          </li>
+          <li class="slide">
+            <img src="https://img.besthqwallpapers.com/Uploads/21-8-2017/18856/estoril-praia-football-club-estoril-portugal-emblem.jpg" alt="Estoril Praia">
+          </li>
+          <li class="slide">
+            <img src="https://miro.medium.com/max/2000/1*sNOlwa05vwAqQtnmw_KsMw.jpeg" alt="Gil Vicente FC">
+          </li>
+          <li class="slide">
+            <img src="https://miro.medium.com/max/2000/1*NqzvCvuz5YCxCs7L2Oxc6A.jpeg" alt="Portimonense">
+          </li>
+          <li class="slide">
+            <img src="https://img.besthqwallpapers.com/Uploads/21-12-2018/75295/vitoria-setubal-fc-4k-logo-creative-art-green-white-checkered-flag.jpg" alt="Vitória SC">
+          </li>
+          <li class="slide">
+            <img src="https://i.ibb.co/BqKS6GZ/FC-Arouca.png" alt="FC Arouca">
+          </li>
+          <li class="slide">
+            <img src="https://i.ibb.co/51stWjS/cd-tondela-logo-0.png" alt="CD Tondela">
+          </li>
+          <li class="slide">
+            <img src="https://img.besthqwallpapers.com/Uploads/21-8-2017/18843/boavista-fc-football-club-boavista-emblem-logo-porto.jpg" alt="Boavista FC">
+          </li>
+          <li class="slide">
+            <img src="https://miro.medium.com/max/2000/1*Y4IW75WI6l0Oy3YbgpJ6vQ.jpeg" alt="Marítimo M.">
+          </li>
+          <li class="slide">
+            <img src="https://i.ibb.co/prd4jRy/fc-pa-os-de-ferreira-portuguese-football-club-4k-logo-material-design.jpg" alt="FC P. Ferreira">
+          </li>
+          <li class="slide">
+            <img src="https://miro.medium.com/max/2000/1*Ut4CFshO43Y1jn4Nbo3jVQ.jpeg" alt="FC Famalicão">
+          </li>
+          <li class="slide">
+            <img src="https://i.ibb.co/BqHjVy0/vizela-logo-freelogovectors-net.png" alt="FC Vízela">
+          </li>
+          <li class="slide">
+            <img src="https://i.ibb.co/Th76hGm/image.png" alt="Santa Clara">
+          </li>
+          <li class="slide">
+            <img src="https://img.besthqwallpapers.com/Uploads/21-12-2018/75253/moreirense-fc-4k-logo-creative-art-white-green-checkered-flag.jpg" alt="Moreirense FC">
+          </li>
+          <li class="slide">
+            <img src="https://miro.medium.com/max/2000/1*bA_Wejm4HgT-rv0tDXu9XA.jpeg" alt="Belenenses SAD">
+          </li>
+          
+        </ul>
+      </div>
+    </section>
+  
+
+    <!-- Modal para registar novo utilizador -->
+    <!-- se retirar o data-bs-backdrop, o modal desaparece ao clicar no fundo da página -->
+    <div
+      class="modal fade"
+      id="modalRegistar"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+      data-bs-backdrop="static"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Registo de novo utilizador
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label class="form-label">E-Mail</label>
+              <input
+                type="email"
+                class="form-control"
+                id="usernameRegistar"
+                name="usernameRegistar"
+                placeholder="E-Mail"
+              />
+              <p id="emailErroLoginRegistar"></p>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Senha</label>
+              <input
+                type="password"
+                class="form-control"
+                id="senhaRegistar"
+                name="senhaRegistar"
+                placeholder="Senha"
+              />
+              <p id="statusRegistar"></p>
+            </div>
+            <div class="modal-footer d-block">
+              <button id="btnCancelaRegistar" class="btn btn-warning float-end" data-bs-dismiss="modal">
+                Cancelar
+              </button>
+              <button
+                class="btn btn-success float-end"
+                id="btnSubmitRegistar"
+                onclick="validaRegisto()"
+              >
+                Submeter
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal para fazer login -->
+    <!-- se retirar o data-bs-backdrop, o modal desaparece ao clicar no fundo da página -->
+    <div
+      class="modal fade"
+      id="modalLogin"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+      data-bs-backdrop="static"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Insira suas credenciais
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+              id="btnLoginClose"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label class="form-label">E-Mail</label>
+              <input
+                type="email"
+                class="form-control"
+                id="usernameLogin"
+                name="usernameLogin"
+                placeholder="E-Mail"
+              />
+              <p id="emailErroLogin"></p>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Senha</label>
+              <input
+                type="password"
+                class="form-control"
+                id="senhaLogin"
+                name="senhaLogin"
+                placeholder="Senha"
+              />
+              <p id="passErroLogin"></p>
+              <p id="statusLogin"></p>
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="rememberMe" />
+              <label class="form-check-label" for="rememberMe"
+                >Lembrar-me</label
+              >
+            </div>
+            <div class="modal-footer d-block">
+              <p id='pRegistar' class="float-start">
+                Sem conta ainda? <a href="#">Registe-se</a>
+              </p>
+              <button class="btn btn-warning float-end" data-bs-dismiss="modal">
+                Cancelar
+              </button>
+              <button
+                class="btn btn-success float-end"
+                id="btnSubmitLogin"
+                onclick="validaLogin()"
+              >
+                Submeter
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="articles" class="row row-cols-1 row-cols-md-3 g-4 container-fluid">
+    </div>
+    <footer>
+      <div class="text-center p-3" style="height: 80px; line-height: 74px; background-color: rgb(51, 51, 51); color: #ffffff;">
+        © 2021 Copyright
+      </div>
+    </footer>
+    <!-- Bootstrap JS -->
+    <script src="https://www.markuptag.com/bootstrap/5/js/bootstrap.bundle.min.js"></script>
+    <script src="js/users.js"></script>
+    <script src="js/ondemand.js"></script>
+  </body>
+</html>
